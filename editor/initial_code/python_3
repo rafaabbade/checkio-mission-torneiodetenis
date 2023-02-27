@@ -1,14 +1,19 @@
-def count_consecutive_summers(num):
-    # your code here
+def soma(a,b):
+    # escreva aqui seu código
     return None
 
 
-if __name__ == '__main__':
-    print("Example:")
-    print(count_consecutive_summers(42))
+print("Example:")
+print(soma(3,2))
 
-    # These "asserts" are used for self-checking and not for an auto-testing
-    assert count_consecutive_summers(42) == 4
-    assert count_consecutive_summers(99) == 6
-    assert count_consecutive_summers(1) == 1
-    print("Coding complete? Click 'Check' to earn cool rewards!")
+# As funções assert são utilizadas para verificar se o resultado da função chamada é o esperado
+# testa a função com números positivos como parâmetros
+assert soma(2, 3) == 5 
+    
+# testa a função com um número negativo como parâmetro
+assert soma(-1, 5) == 4
+    
+# testa a função com zero como parâmetro
+assert soma(0, 0) == 0
+    
+print("Seu código passou pelos testes, clique em Check para avançar!")
