@@ -1,0 +1,136 @@
+<body data-author="Rafa-Abbade">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Please give me a hint on how to solve this mission. teste1
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Teste 2. You can use list method <a target="_blank" href="https://docs.python.org/3/tutorial/datastructures.html#more-on-lists">count</a> that returns the number of times <b class="code">x</b> appears in the list.</p>
+        <p>
+            Here is an example:
+        </p>
+        <pre class="brush: python">
+a = [1, 2, 2, 3, 4, 5, 6, 3, 2]
+print(a.count(3))        
+        </pre>
+        <div class="output">
+            <p>Output:</p>
+            <pre>
+2
+            </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            How can I use this to solve this mission?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Let’s think about this way: you need to go through all elements of a given list and create a new list filled with all non unique elements.
+        </p>
+        <pre class="brush: python">
+from collections.abc import Iterator
+
+
+def checkio(data: list[int]) -> Iterator[int]:
+    # init empty list
+    for item in data:
+        if data.count(item) > 1:
+            # add the current item to the new list you initialized before
+    # return the list
+        </pre>
+        <p>
+            All you have left to do is to replace the comments with python code.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Please help me to replace the comments.
+        </p>
+    </div>
+    <div class="answer">
+        <p>Sure. Here is what you need to know.</p>
+        <p>To initialize an empty list do this:</p>
+        <pre class="brush: python">
+new_list = []
+        </pre>
+        <p>To add an item to the list do this:</p>
+        <pre class="brush: python">
+new_list.append(item)
+        </pre>
+        <p>To return the list use this:</p>
+        <pre class="brush: python">
+return new_list
+        </pre>
+        <p>So the correct answer might look like this:</p>
+        <pre class="brush: python">
+from collections.abc import Iterator
+
+
+def checkio(data: list[int]) -> Iterator[int]:
+
+    result = []
+    for item in data:
+        if data.count(item) > 1:
+            result.append(item)
+
+    return result
+        </pre>
+        <p>
+            I would also recommend you to have a look at all available <a target="_blank" href="https://docs.python.org/3/tutorial/datastructures.html#more-on-lists">list methods</a>, so you know what other methods you might need in the future.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Is there any way I can improve the solution?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            There is always a way to improve something. You can take a look at <a target="_blank" href="https://wiki.python.org/moin/Generators">Generators for Python</a>.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ok. How can I use it?
+        </p>
+    </div>
+    <div class="answer">
+        <p>You can simply replace code</p>
+        <pre class="brush: python">
+from collections.abc import Iterator
+
+
+def checkio(data: list[int]) -> Iterator[int]:
+
+    result = []
+    for item in data:
+        if data.count(item) > 1:
+            result.append(item)
+
+    return result
+        </pre>
+        <p>with this:</p>
+        <pre class="brush: python">
+from collections.abc import Iterator
+
+
+def checkio(data: list[int]) -> Iterator[int]:
+
+    return (a for a in data if data.count(a) > 1)
+        </pre>
+        <p>It is shorter and even easier to read.</p>
+    </div>
+</div>
+</body>
