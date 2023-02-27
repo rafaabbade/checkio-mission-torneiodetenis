@@ -1,25 +1,23 @@
 <!-- Describe task in general -->
 
 <p>
-    Positive integers can be expressed as sums of consecutive positive integers in various ways. For example, 42 can be expressed as such a sum in four different ways:(a) 3+4+5+6+7+8+9, (b) 9+10+11+12, (c) 13+14+15 and (d) 42. As the last solution (d) shows, any positive integer can always be trivially expressed as a singleton sum   that consists of that integer alone.
+    Crie uma função que receba dois números inteiros como parâmetros e retorne a soma desses números.
 </p>
-
-<p>Compute how many different ways it can be expressed as a sum of consecutive positive integers.</p>
 
 <!-- Explain input and output values -->
 <p>
-    <strong>Input: </strong> Int.
+    <strong>Entrada: </strong> Dois números inteiros a e b.
 </p>
 
 <p>
-    <strong>Output: </strong> Int. 
+    <strong>Saída: </strong> Um número inteiro, que é a soma de a e b. 
 </p>
 
 
 <!-- Put some usage examples -->
 <div class="for_info_only">
     <p>
-        <strong>Example:</strong>
+        <strong>Exemplo:</strong>
     </p>
 
 {% if interpreter.slug == "js-node" %}
@@ -27,16 +25,10 @@
 countConsecutiveSummers(99) == 6
 </pre>
 {% else %}
-<pre class="brush: python">count_consecutive_summers(42) == 4
-count_consecutive_summers(99) == 6
+<pre class="brush: python">soma(2,3) == 5
+soma(-1,5) == 4
+soma(0,0) == 0
 </pre>
 {% endif %}
 </div>
-
-<p>
-    <strong>Precondition:</strong>
-    <i>Input is always a positive integer.</i>
-</p>
-
-<p><i>The mission was taken from Python CCPS 109 Fall 2018. It’s being taught for Ryerson Chang School of Continuing Education by <a href="http://www.scs.ryerson.ca/~ikokkari/">Ilkka Kokkarinen</a></i></p>
 
