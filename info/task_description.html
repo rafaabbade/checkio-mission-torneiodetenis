@@ -1,16 +1,24 @@
 <!-- Describe task in general -->
 
 <p>
-    Crie uma função que receba dois números inteiros como parâmetros e retorne a soma desses números.
+    A prefeitura contratou um novo professor para ensinar as crianças do bairro a jogar tênis na quadra de tênis do parque municipal. O professor convidou todas as crianças do bairro interessadas em aprender a jogar tênis. Ao final do primeiro mês de aulas e treinamentos foi organizado um torneio em que cada participante disputou exatamente seis jogos. O professor vai usar o desempenho no torneio para separar as crianças em três grupos, de forma a ter grupos de treino em que os participantes tenham habilidades mais ou menos iguais, usando o seguinte critério:
+    <ul>
+        <li>participantes que venceram 5 ou 6 jogos serão colocados no Grupo 1;</li>
+        <li>participantes que venceram 3 ou 4 jogos serão colocados no Grupo 2;</li>
+        <li>participantes que venceram 1 ou 2 jogos serão colocados no Grupo 3;</li>
+        <li>participantes que não venceram nenhum jogo não serão convidados a continuar com os treinamentos</li>
+    </ul>
+   
+Dada uma lista com o resultado dos jogos de um participante, escreva um programa para determinar em qual grupo ele será colocado.
 </p>
 
 <!-- Explain input and output values -->
 <p>
-    <strong>Entrada: </strong> Dois números inteiros a e b.
+    <strong>Entrada: </strong> A entrada consiste em uma lista com seis elementos, cada um indicando o resultado de um jogo do participante. Cada elemento contém um único caractere: V se o participante venceu o jogo, ou P se o jogador perdeu o jogo. Não há empates nos jogos.
 </p>
 
 <p>
-    <strong>Saída: </strong> Um número inteiro, que é a soma de a e b. 
+    <strong>Saída: </strong> Seu programa deve produzir uma única linha na saída, contendo um único inteiro, identificando o grupo em que o participante será colocado. Se o participante não for colocado em nenhum dos três grupos seu programa deve imprimir o valor -1.
 </p>
 
 
@@ -25,9 +33,14 @@
 countConsecutiveSummers(99) == 6
 </pre>
 {% else %}
-<pre class="brush: python">soma(2,3) == 5
-soma(-1,5) == 4
-soma(0,0) == 0
+<pre class="brush: python">
+determinar_grupo(['V', 'V', 'V', 'V', 'V', 'V']) == 1
+
+determinar_grupo(['V', 'V', 'V', 'V', 'P', 'P']) == 2
+
+determinar_grupo(['V', 'V', 'P', 'P', 'P', 'P']) == 3
+
+determinar_grupo(['P', 'P', 'P', 'P', 'P', 'P']) == -1
 </pre>
 {% endif %}
 </div>
