@@ -1,19 +1,22 @@
-def soma(a,b):
+def determinar_grupo(resultados):
     # escreva aqui seu código
     return None
 
 
 print("Example:")
-print(soma(3,2))
+print(determinar_grupo([['V', 'V', 'V', 'V', 'P', 'P']]))
 
 # As funções assert são utilizadas para verificar se o resultado da função chamada é o esperado
-# testa a função com números positivos como parâmetros
-assert soma(2, 3) == 5 
-    
-# testa a função com um número negativo como parâmetro
-assert soma(-1, 5) == 4
-    
-# testa a função com zero como parâmetro
-assert soma(0, 0) == 0
-    
+# Teste 1
+assert determinar_grupo(['V', 'V', 'V', 'V', 'V', 'V']) == 1
+
+# Teste 2
+assert determinar_grupo(['V', 'V', 'V', 'V', 'P', 'P']) == 2
+
+# Teste 3
+assert determinar_grupo(['V', 'V', 'P', 'P', 'P', 'P']) == 3
+
+# Teste 4
+assert determinar_grupo(['P', 'P', 'P', 'P', 'P', 'P']) == -1
+
 print("Seu código passou pelos testes, clique em Check para avançar!")
